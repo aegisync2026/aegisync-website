@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegisync | Reliable Global Connectivity and Intelligent ICT Solutions</title>
+    <meta name="description" content="Aegisync delivers enterprise-grade connectivity, software development, ICT integration, network monitoring, and technical talent outsourcing across APAC and beyond.">
+    <meta name="keywords" content="DIA connectivity, SD-WAN, data center, colocation, network monitoring, software development, ICT integration, technical outsourcing, Aegisync">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="js/tailwindcss.js"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0F3B68', // Deep Blue
+                            lightBlue: '#1E5A99',
+                            gray: '#334155', // Professional Gray
+                            lightGray: '#F8FAFC', // Tech White/Light Gray
+                            accent: '#2563EB' // CTA Blue
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+                        display: ['Outfit', 'Manrope', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="js/lucide.js"></script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .hero-bg {
+            background: linear-gradient(to right, rgba(15, 59, 104, 0.9), rgba(30, 90, 153, 0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+        }
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #2563EB;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-gray bg-white antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-3">
+                        <img src="images/logo/company-logo.png" alt="Aegisync" class="h-10 w-10 object-contain">
+                        <span class="text-2xl font-bold text-brand-blue tracking-tight font-display">Aegisync</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">About Us</a>
+                    <a href="#services" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Services</a>
+                    <a href="#network" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Network</a>
+                    <a href="#contact" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-gray hover:text-brand-accent focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gray hover:text-brand-accent hover:bg-gray-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gray hover:text-brand-accent hover:bg-gray-50">About Us</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gray hover:text-brand-accent hover:bg-gray-50">Services</a>
+                <a href="#network" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gray hover:text-brand-accent hover:bg-gray-50">Network</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-brand-gray hover:text-brand-accent hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-blue/20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pb-32 md:pb-40 mt-10">
+            <div class="text-center max-w-4xl mx-auto opacity-0 animate-fade-in-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm font-medium mb-6">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    Trusted Technology Partner
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight font-display">
+                    Reliable Global Connectivity and <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white">Intelligent ICT Solutions</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Empowering modern enterprises with DIA connectivity, software development, network monitoring, technical talent outsourcing, and data center solutions across APAC and beyond.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-brand-accent hover:bg-blue-700 transition-colors shadow-lg hover:shadow-blue-500/30">
+                        Contact Us
+                        <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                    </a>
+                    <a href="#about" class="inline-flex items-center justify-center px-8 py-3.5 border border-white/30 text-base font-medium rounded-lg text-white hover:bg-white/10 transition-colors backdrop-blur-sm">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Services Overview -->
+    <section class="relative -mt-24 sm:-mt-32 z-30 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                    <i data-lucide="code-2" class="h-6 w-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-brand-blue mb-2">DIA Connectivity</h3>
+                <p class="text-sm text-gray-500">High-performance international internet access</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                    <i data-lucide="network" class="h-6 w-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-brand-blue mb-2">Data Center & Colocation</h3>
+                <p class="text-sm text-gray-500">Scalable infrastructure and hosted resources</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                    <i data-lucide="activity" class="h-6 w-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-brand-blue mb-2">Network Monitoring</h3>
+                <p class="text-sm text-gray-500">Real-time optimization for operators and enterprises</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                    <i data-lucide="users" class="h-6 w-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-brand-blue mb-2">Software Development</h3>
+                <p class="text-sm text-gray-500">Custom solutions for network and automation</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                    <i data-lucide="server" class="h-6 w-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-brand-blue mb-2">SD-WAN (Coming Soon)</h3>
+                <p class="text-sm text-gray-500">Next-generation multi-region connectivity</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-brand-lightGray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-sm font-bold text-brand-accent tracking-widest uppercase mb-3">About Aegisync</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-brand-blue mb-6 leading-tight font-display">Building Reliable, Secure, and<br>Scalable Digital Infrastructure</h3>
+                    <div class="prose prose-lg text-gray-600 mb-8">
+                        <p>
+                            Aegisync Limited is a Hong Kong-registered technology company delivering regional and global ICT, network, and software solutions for enterprises across APAC and beyond.
+                        </p>
+                        <p>
+                            We provide comprehensive capabilities including DIA connectivity, data center and colocation services, network monitoring platforms, custom software development, enterprise ICT integration, and technical talent outsourcing. Our SD-WAN solution is currently under development and scheduled for launch by the end of this year.
+                        </p>
+                        <p>
+                            With deep expertise in ICT and network engineering, we help businesses build stable, secure, and scalable digital infrastructure that supports their global operations.
+                        </p>
+                    </div>
+                    
+                    <div class="grid sm:grid-cols-2 gap-8 mt-12 border-t pt-8 border-gray-200">
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="bg-blue-100 p-2 rounded text-brand-accent"><i data-lucide="target" class="h-5 w-5"></i></div>
+                                <h4 class="text-xl font-bold text-brand-blue font-display">Mission</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">To empower enterprises and service providers with reliable connectivity, scalable digital infrastructure, and expert ICT solutions across APAC and beyond.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="bg-blue-100 p-2 rounded text-brand-accent"><i data-lucide="eye" class="h-5 w-5"></i></div>
+                                <h4 class="text-xl font-bold text-brand-blue font-display">Vision</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm leading-relaxed">To become a trusted technology partner delivering innovative, high-performance network and ICT solutions for global businesses.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative mt-12 lg:mt-0">
+                    <!-- Placeholder image to be replaced by actual business photo -->
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Aegisync Data Center" class="rounded-2xl shadow-2xl z-10 relative object-cover h-[400px] sm:h-[500px] w-full">
+                    <div class="absolute inset-0 bg-brand-blue/10 rounded-2xl z-20 mix-blend-multiply"></div>
+                    <div class="absolute sm:-bottom-6 sm:-left-6 bottom-4 left-4 right-4 sm:right-auto bg-white p-6 rounded-xl shadow-xl z-30 border border-gray-100">
+                        <h4 class="font-bold text-brand-blue mb-4 flex items-center gap-2 font-display">
+                            <i data-lucide="star" class="h-5 w-5 text-yellow-500 fill-current"></i>
+                            Core Values
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-1.5"></div> <span class="break-all"><strong>Customer-Centric:</strong> Focus on client needs with practical solutions</span></li>
+                            <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-1.5"></div> <span class="break-all"><strong>Innovation:</strong> Apply advanced technology for digital transformation</span></li>
+                            <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-1.5"></div> <span class="break-all"><strong>Reliability:</strong> Ensure stable service and system performance</span></li>
+                            <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-1.5"></div> <span class="break-all"><strong>Collaboration:</strong> Partner closely to solve business challenges</span></li>
+                            <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0 mt-1.5"></div> <span class="break-all"><strong>Integrity:</strong> Transparent and ethical business practices</span></li>
+                        </ul>
+                    </div>
+                    <!-- Decorative pattern -->
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-[radial-gradient(#e5e7eb_2px,transparent_2px)] [background-size:16px_16px] z-0 hidden sm:block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base font-bold text-brand-accent tracking-widest uppercase mb-4">Our Services</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-brand-blue mb-6 leading-tight font-display">Comprehensive Enterprise ICT Solutions</h3>
+                <p class="text-xl text-gray-600 leading-relaxed">From infrastructure to applications, we deliver end-to-end services ensuring your technology stack is robust and highly scalable.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Group 1: 软件与 ICT 解决方案 -->
+                <div class="bg-brand-lightGray rounded-2xl p-8 border border-gray-100 hover:border-blue-200 transition-colors">
+                    <div class="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200">
+                        <div class="bg-brand-blue text-white p-3 rounded-xl"><i data-lucide="layers" class="h-6 w-6"></i></div>
+                        <h4 class="text-2xl font-bold text-brand-blue font-display">Connectivity & Infrastructure</h4>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <h5 class="text-lg font-bold text-brand-gray flex items-center gap-2 mb-2">
+                                <i data-lucide="globe" class="h-5 w-5 text-brand-accent"></i> DIA Connectivity
+                            </h5>
+                            <p class="text-gray-600 text-sm ml-7">High-performance international internet access designed for enterprises requiring reliable, low-latency global connectivity.</p>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-brand-gray flex items-center gap-2 mb-2">
+                                <i data-lucide="server" class="h-5 w-5 text-brand-accent"></i> Data Center & Colocation
+                            </h5>
+                            <p class="text-gray-600 text-sm ml-7">Secure rack rental, hosted infrastructure, and scalable computing resources to support your business growth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 2: 网络监控 -->
+                <div class="bg-brand-lightGray rounded-2xl p-8 border border-gray-100 hover:border-blue-200 transition-colors">
+                    <div class="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200">
+                        <div class="bg-brand-blue text-white p-3 rounded-xl"><i data-lucide="activity-square" class="h-6 w-6"></i></div>
+                        <h4 class="text-2xl font-bold text-brand-blue font-display">ICT & Software Solutions</h4>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <h5 class="text-lg font-bold text-brand-gray flex items-center gap-2 mb-2">
+                                <i data-lucide="activity" class="h-5 w-5 text-brand-accent"></i> Network Monitoring Platform
+                            </h5>
+                            <p class="text-gray-600 text-sm ml-7">Real-time monitoring and optimization platform for operators and enterprises, enhancing network performance and visibility.</p>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-brand-gray flex items-center gap-2 mb-2">
+                                <i data-lucide="code-2" class="h-5 w-5 text-brand-accent"></i> Software Development
+                            </h5>
+                            <p class="text-gray-600 text-sm ml-7">Custom software solutions supporting network automation, enterprise systems, and ICT infrastructure management.</p>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-brand-gray flex items-center gap-2 mb-2">
+                                <i data-lucide="network" class="h-5 w-5 text-brand-accent"></i> Enterprise ICT & Systems Integration
+                            </h5>
+                            <p class="text-gray-600 text-sm ml-7">Integrate global ICT infrastructure and cloud platforms for unified, efficient operations across regions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 3: 专业服务 -->
+                <div class="bg-brand-lightGray rounded-2xl p-8 border border-gray-100 hover:border-blue-200 transition-colors">
+                    <div class="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200">
+                        <div class="bg-brand-blue text-white p-3 rounded-xl"><i data-lucide="users-2" class="h-6 w-6"></i></div>
+                        <h4 class="text-2xl font-bold text-brand-blue font-display">Professional Services</h4>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <h5 class="text-lg font-bold text-brand-gray flex items-center gap-2 mb-2">
+                                <i data-lucide="users" class="h-5 w-5 text-brand-accent"></i> Technical Talent Outsourcing
+                            </h5>
+                            <p class="text-gray-600 text-sm ml-7">Skilled ICT and network engineers supporting project implementation, system deployment, and technical operations worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 4: 数据中心与算力 -->
+                <div class="bg-brand-lightGray rounded-2xl p-8 border border-gray-100 hover:border-blue-200 transition-colors">
+                    <div class="flex items-center gap-4 mb-8 pb-6 border-b border-gray-200">
+                        <div class="bg-brand-blue text-white p-3 rounded-xl"><i data-lucide="hard-drive" class="h-6 w-6"></i></div>
+                        <h4 class="text-2xl font-bold text-brand-blue font-display">Next-Generation Networking</h4>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-brand-accent text-xs font-bold mb-3">
+                                <i data-lucide="clock" class="h-3 w-3"></i>
+                                COMING SOON
+                            </div>
+                            <h5 class="text-lg font-bold text-brand-gray flex items-center gap-2 mb-2">
+                                <i data-lucide="route" class="h-5 w-5 text-brand-accent"></i> SD-WAN Solution
+                            </h5>
+                            <p class="text-gray-600 text-sm ml-7">Under development and launching by end of year. Designed to enhance multi-region connectivity, automation, and network visibility for modern enterprises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Section -->
+    <section id="network" class="py-24 bg-brand-lightGray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-brand-accent tracking-widest uppercase mb-3">Our Network</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4 font-display">Global Connectivity Infrastructure</h3>
+                <p class="text-lg text-gray-600">Delivering reliable DIA connectivity and data center services across APAC with enterprise-grade performance and monitoring capabilities.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- DIA Coverage -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:border-blue-200 transition-all">
+                    <div class="w-14 h-14 rounded-xl bg-blue-50 text-brand-accent flex items-center justify-center mb-6">
+                        <i data-lucide="globe-2" class="h-7 w-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-blue mb-3 font-display">DIA International Network</h4>
+                    <p class="text-gray-600 mb-4">High-performance Direct Internet Access providing reliable, low-latency connectivity for enterprises across the Asia-Pacific region.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>Multi-carrier redundancy</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>99.9% uptime SLA</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>Scalable bandwidth</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Data Center -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:border-blue-200 transition-all">
+                    <div class="w-14 h-14 rounded-xl bg-blue-50 text-brand-accent flex items-center justify-center mb-6">
+                        <i data-lucide="database" class="h-7 w-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-blue mb-3 font-display">Data Center Locations</h4>
+                    <p class="text-gray-600 mb-4">Secure, carrier-neutral facilities with comprehensive colocation services and scalable computing resources.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>Tier 3+ certified facilities</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>24/7 security & monitoring</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>Flexible rack configurations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Monitoring Platform -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:border-blue-200 transition-all">
+                    <div class="w-14 h-14 rounded-xl bg-blue-50 text-brand-accent flex items-center justify-center mb-6">
+                        <i data-lucide="monitor-dot" class="h-7 w-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-blue mb-3 font-display">Monitoring Platform</h4>
+                    <p class="text-gray-600 mb-4">Real-time network performance monitoring and analytics for operators and enterprise customers.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>Real-time visibility</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>Performance analytics</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                            <span>Automated alerts</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Network Map Placeholder -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div class="flex items-center justify-between mb-6">
+                    <h4 class="text-2xl font-bold text-brand-blue font-display">APAC Network Coverage</h4>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-200 text-green-700 text-xs font-bold">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        OPERATIONAL
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-gray-50 rounded-xl overflow-hidden border border-gray-200">
+                    <img src="images/network-map.jpg" alt="APAC Network Infrastructure Map" class="w-full h-auto object-cover" style="min-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-blue text-white relative overflow-hidden">
+        <!-- Background decorative vectors -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 opacity-10 pointer-events-none">
+            <svg width="404" height="404" fill="none" viewBox="0 0 404 404"><defs><pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"></rect></svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 font-display">Ready to Get Started?</h2>
+                    <p class="text-blue-200 mb-10 text-lg">Whether you need technical consultation, project assessment, or strategic partnership discussions, our expert team is ready to support your business.</p>
+                    
+                    <div class="space-y-8">
+                        <!-- Email -->
+                        <div class="flex items-start gap-4 bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+                            <div class="bg-brand-accent p-3 rounded-lg mt-1">
+                                <i data-lucide="mail" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-blue-300 font-medium mb-1">Business Enquiries</h4>
+                                <a href="mailto:contact@aegisync.com" class="text-2xl font-bold hover:text-brand-accent transition-colors">contact@aegisync.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Locations -->
+                        <div>
+                            <h4 class="text-sm font-bold tracking-widest text-blue-300 uppercase mb-4 pl-1 border-l-2 border-brand-accent">Office Location</h4>
+                            <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <i data-lucide="building-2" class="h-5 w-5 text-brand-accent mt-1"></i>
+                                    <div>
+                                        <p class="font-bold text-white mb-1">Aegisync Limited</p>
+                                        <p class="text-sm text-blue-200">Unit 12, 21/F, Wayson Commercial Building</p>
+                                        <p class="text-sm text-blue-200">28 Connaught Road West</p>
+                                        <p class="text-sm text-blue-200">Sheung Wan, Hong Kong</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl p-8 shadow-2xl text-brand-gray">
+                    <h3 class="text-2xl font-bold text-brand-blue mb-6 font-display">Send us a Message</h3>
+                    <form action="#" method="POST" class="space-y-5">
+                        <div class="grid grid-cols-2 gap-5">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="first-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-shadow" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                                <input type="text" id="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-shadow" placeholder="Company name">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                            <input type="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-shadow" placeholder="name@company.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-shadow resize-none" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-800 transition-colors shadow-lg flex justify-center items-center gap-2">
+                            Send Message <i data-lucide="send" class="h-4 w-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0A2644] text-gray-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold text-white tracking-tight font-display">Aegisync</span>
+                    </div>
+                    <p class="text-sm mb-4 max-w-sm">Reliable global connectivity and intelligent ICT solutions for modern enterprises across APAC and beyond.</p>
+                    <p class="text-sm">Aegisync Limited &copy; <span id="year"></span>. All rights reserved.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-display">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#network" class="hover:text-white transition-colors">Network</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-display">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Update year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar blur on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
