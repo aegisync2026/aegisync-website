@@ -1,0 +1,6 @@
+name = "my-worker"
+main = "src/index.js"
+compatibility_date = "2026-03-18"
+
+# 指定忽略文件
+ignore = ["node_modules", ".git", "*.log"]
