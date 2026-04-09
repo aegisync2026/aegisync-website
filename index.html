@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <script>
-        if (window.location.protocol === 'http:') {
-            window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-        }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AegiSync | Reliable Global Connectivity and Intelligent ICT Solutions</title>
     <meta name="description" content="AegiSync delivers enterprise-grade software development, ICT integration, corporate consulting, and technical talent outsourcing across APAC and beyond.">
-    <meta name="keywords" content="software development, ICT integration, corporate consulting, data center, network monitoring, technical outsourcing, AegiSync">
     
     <link rel="icon" type="image/png" href="/favicon.png">
     
@@ -18,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <script src="js/tailwindcss.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     <script>
         tailwind.config = {
@@ -56,8 +51,6 @@
         }
     </script>
 
-    <script src="js/lucide.js"></script>
-
     <style>
         .glass-nav {
             background: rgba(255, 255, 255, 0.95);
@@ -82,4 +75,80 @@
     <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-3">
+                        <img src="images/logo/company-logo.png" alt="AegiSync" class="h-10 w-10 object-contain">
+                        <span class="text-2xl font-bold text-brand-blue tracking-tight font-display">AegiSync</span>
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">About Us</a>
+                    <a href="#services" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Services</a>
+                    <a href="#network" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Network</a>
+                    <a href="#contact" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-blue/20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pb-32 md:pb-40 mt-10">
+            <div class="text-center max-w-4xl mx-auto opacity-0 animate-fade-in-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm font-medium mb-6">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    Trusted Technology Partner
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight font-display">
+                    Intelligent ICT Solutions and <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white">Software Development</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Empowering modern enterprises with ICT integration, corporate consulting, and custom software architecture across APAC and beyond.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-brand-accent hover:bg-blue-700 transition-colors shadow-lg hover:shadow-blue-500/30">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative -mt-24 sm:-mt-32 z-30 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                    <i data-lucide="network" class="h-6 w-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-brand-blue mb-2">ICT Integration</h3>
+                <p class="text-sm text-gray-500">Enterprise infrastructure and systems architecture optimization</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                    <i data-lucide="code-2" class="h-6 w-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-brand-blue mb-2">Software Development</h3>
+                <p class="text-sm text-gray-500">Custom software solutions for enterprise automation</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                    <i data-lucide="briefcase" class="h-6 w-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-brand-blue mb-2">Corporate Consulting</h3>
+                <p class="text-sm text-gray-500">Strategic technology alignment and operational guidance</p>
+            </div>
+        </div>
+    </section>
+
+    <div style="min-height: 20vh;"></div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
