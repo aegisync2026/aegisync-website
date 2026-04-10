@@ -1,154 +1,149 @@
+export default {
+  async fetch(request, env, ctx) {
+    // 品牌名称统一定义
+    const BRAND_NAME = "AegiSync";
+    const PROJECT_NAME = "Horasis";
+
+    const html = `
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AegiSync | Reliable Global Connectivity and Intelligent ICT Solutions</title>
-    <meta name="description" content="AegiSync delivers enterprise-grade software development, ICT integration, corporate consulting, and technical talent outsourcing across APAC and beyond.">
-    
-    <link rel="icon" type="image/png" href="/favicon.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>${PROJECT_NAME} Sentinel | ${BRAND_NAME} Limited</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            blue: '#0F3B68',
-                            lightBlue: '#1E5A99',
-                            gray: '#334155',
-                            lightGray: '#F8FAFC',
-                            accent: '#2563EB'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Manrope', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-                        display: ['Outfit', 'Manrope', 'sans-serif'],
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'fade-in': 'fadeIn 1s ease-out forwards',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #0B1015;
+            background-image: radial-gradient(circle at 80% 20%, #1a2a33 0%, transparent 45%);
+            margin: 0;
+            min-height: 100vh;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
         }
-        .hero-bg {
-            background: linear-gradient(to right, rgba(15, 59, 104, 0.9), rgba(30, 90, 153, 0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+        .glass-panel {
+            background: rgba(23, 28, 34, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .service-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .neon-button {
+            background: linear-gradient(90deg, #00F0FF 0%, #00D1FF 100%);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
         }
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: #2563EB;
+        .neon-button:hover {
+            box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
+            transform: translateY(-1px);
         }
     </style>
 </head>
-<body class="font-sans text-brand-gray bg-white antialiased selection:bg-brand-blue selection:text-white">
+<body class="antialiased">
 
-    <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="flex items-center gap-3">
-                        <img src="images/logo/company-logo.png" alt="AegiSync" class="h-10 w-10 object-contain">
-                        <span class="text-2xl font-bold text-brand-blue tracking-tight font-display">AegiSync</span>
-                    </a>
+    <main class="flex-grow flex items-center justify-center p-6 md:p-12 lg:p-24">
+        <div class="max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-32">
+            
+            <div class="w-full lg:w-1/2 space-y-12">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#00F0FF] rounded-sm flex items-center justify-center shadow-[0_0_20px_rgba(0,240,255,0.4)]">
+                        <svg class="w-7 h-7 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold tracking-tighter leading-none uppercase">${PROJECT_NAME}</h1>
+                        <p class="text-[9px] tracking-[0.4em] text-cyan-500/80 mt-1 uppercase font-bold">By ${BRAND_NAME} Limited</p>
+                    </div>
                 </div>
 
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Home</a>
-                    <a href="#about" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">About Us</a>
-                    <a href="#services" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Services</a>
-                    <a href="#network" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Network</a>
-                    <a href="#contact" class="text-brand-gray hover:text-brand-accent font-medium transition-colors">Contact</a>
-                </nav>
+                <div class="space-y-6">
+                    <h2 class="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+                        Secure Operations<br>
+                        <span class="text-white opacity-90">Orchestrated.</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-md border-l-2 border-cyan-900/40 pl-6">
+                        Empowering modern enterprises with ICT integration, corporate consulting, and custom software architecture.
+                    </p>
+                </div>
+
+                <div class="flex gap-16">
+                    <div>
+                        <div class="text-[#00F0FF] text-3xl font-bold italic tracking-tight">99.99%</div>
+                        <div class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mt-2 font-bold text-center lg:text-left">Uptime SLA</div>
+                    </div>
+                    <div class="border-l border-gray-800 pl-16">
+                        <div class="text-green-400 text-3xl font-bold italic tracking-tight">4.2ms</div>
+                        <div class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mt-2 font-bold text-center lg:text-left">Avg Latency</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel w-full max-w-md rounded-xl p-10 md:p-12">
+                <h3 class="text-2xl font-bold mb-2">System Authentication</h3>
+                <p class="text-gray-500 text-sm mb-10">Enter node credentials to initiate handshake.</p>
+
+                <form class="space-y-6" onsubmit="return false;">
+                    <div>
+                        <label class="block text-[10px] tracking-[0.2em] text-gray-500 uppercase mb-3 font-bold">Identity / Email</label>
+                        <input type="email" placeholder="operator_id@aegisync.com" class="w-full bg-white/5 border border-white/10 py-3.5 px-6 rounded text-sm text-gray-200 focus:outline-none focus:border-cyan-500/50">
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] tracking-[0.2em] text-gray-500 uppercase mb-3 font-bold">Cipher Key</label>
+                        <input type="password" placeholder="••••••••••••" class="w-full bg-white/5 border border-white/10 py-3.5 px-6 rounded text-sm text-gray-200 focus:outline-none focus:border-cyan-500/50">
+                    </div>
+
+                    <div class="flex items-center justify-between text-[11px]">
+                        <label class="flex items-center gap-2 cursor-pointer text-gray-500 hover:text-gray-300 transition-colors">
+                            <input type="checkbox" class="w-4 h-4 rounded bg-gray-900 border-gray-700 checked:bg-cyan-500">
+                            Trust Terminal
+                        </label>
+                        <a href="#" class="text-[#00F0FF] hover:underline underline-offset-4">Recovery Protocol?</a>
+                    </div>
+
+                    <button type="submit" class="neon-button w-full py-4 rounded font-bold text-black flex items-center justify-center gap-3 uppercase tracking-[0.15em] text-sm">
+                        Initiate Login
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </button>
+                </form>
+
+                <div class="relative my-12">
+                    <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-800/50"></div></div>
+                    <div class="relative flex justify-center text-[9px] uppercase tracking-[0.3em] text-gray-600">
+                        <span class="bg-[#171c22] px-4 font-bold">Federated Identity</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="bg-white/5 hover:bg-white/10 py-3.5 rounded text-[11px] font-bold transition-all border border-white/5 uppercase tracking-widest text-center">SAML 2.0</button>
+                    <button class="bg-white/5 hover:bg-white/10 py-3.5 rounded text-[11px] font-bold transition-all border border-white/5 uppercase tracking-widest text-center">OIDC</button>
+                </div>
             </div>
         </div>
-    </header>
+    </main>
 
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
-        <div class="absolute inset-0 bg-brand-blue/20"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pb-32 md:pb-40 mt-10">
-            <div class="text-center max-w-4xl mx-auto opacity-0 animate-fade-in-up">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-sm font-medium mb-6">
-                    <span class="flex h-2 w-2 relative">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                    </span>
-                    Trusted Technology Partner
-                </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight font-display">
-                    Intelligent ICT Solutions and <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white">Software Development</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-                    Empowering modern enterprises with ICT integration, corporate consulting, and custom software architecture across APAC and beyond.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20">
-                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-brand-accent hover:bg-blue-700 transition-colors shadow-lg hover:shadow-blue-500/30">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
+    <footer class="p-8 md:p-12 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] text-gray-600 uppercase border-t border-gray-900/50 w-full mt-auto">
+        <div class="font-bold">${BRAND_NAME} // ${PROJECT_NAME}_V4.2.0</div>
+        <div class="flex gap-8 mt-6 md:mt-0">
+            <a href="#" class="hover:text-cyan-500 transition-colors">Support</a>
+            <a href="#" class="hover:text-cyan-500 transition-colors">Docs</a>
+            <a href="#" class="hover:text-cyan-500 transition-colors">System Status</a>
         </div>
-    </section>
+    </footer>
 
-    <section class="relative -mt-24 sm:-mt-32 z-30 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
-            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
-                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                    <i data-lucide="network" class="h-6 w-6"></i>
-                </div>
-                <h3 class="text-lg font-bold text-brand-blue mb-2">ICT Integration</h3>
-                <p class="text-sm text-gray-500">Enterprise infrastructure and systems architecture optimization</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
-                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                    <i data-lucide="code-2" class="h-6 w-6"></i>
-                </div>
-                <h3 class="text-lg font-bold text-brand-blue mb-2">Software Development</h3>
-                <p class="text-sm text-gray-500">Custom software solutions for enterprise automation</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-gray-100 service-card group flex flex-col h-full">
-                <div class="w-12 h-12 rounded-lg bg-blue-50 text-brand-accent flex items-center justify-center mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors">
-                    <i data-lucide="briefcase" class="h-6 w-6"></i>
-                </div>
-                <h3 class="text-lg font-bold text-brand-blue mb-2">Corporate Consulting</h3>
-                <p class="text-sm text-gray-500">Strategic technology alignment and operational guidance</p>
-            </div>
-        </div>
-    </section>
-
-    <div style="min-height: 20vh;"></div>
-
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
+    `;
+
+    return new Response(html, {
+      headers: {
+        "content-type": "text/html;charset=UTF-8",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY"
+      },
+    });
+  },
+};
